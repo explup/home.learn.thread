@@ -10,6 +10,7 @@ namespace home.learn.thread
     {
         static void Main(string[] args)
         {
+            //
         }
     }
 }
