@@ -1,0 +1,22 @@
+﻿Q1: Lock, mutex, semaphore… what's the difference?
+
+A lock allows only one thread to enter the part that's locked and the lock is not shared with any other processes.
+
+A mutex is the same as a lock but it can be system wide (shared by multiple processes).
+
+A semaphore does the same as a mutex but allows x number of threads to enter, this can be used for example to limit the number of cpu, io or ram intensive tasks running at the same time.
+
+You also have read/write locks that allows either unlimited number of readers or 1 writer at any given time.
+
+Q2:What is the difference between ManualResetEvent and AutoResetEvent in .NET?
+
+Yes. It's like the difference between a tollbooth and a door. The ManualResetEvent is the door, which needs to be closed (reset) manually.
+The AutoResetEvent is a tollbooth, allowing one car to go by and automatically closing before the next one can get through.
+Just imagine that the AutoResetEvent executes WaitOne() and Reset() as a single atomic operation.
+
+Q3: how to make a method is thread-safe?
+1. do not use shared object
+2. use atomic method
+3. use lock on a object to block other threads to enter the shared object
+4. use singal to control the code like mutex
+5. use ReadWriteLock. built-in function in .net.
