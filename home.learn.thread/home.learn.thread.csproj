@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwaitExamples.cs" />
+    <Compile Include="ConcurrentExamples.cs" />
     <Compile Include="Counter.cs" />
     <Compile Include="TaskExamples.cs" />
     <Compile Include="ThreadPoolExamples.cs" />

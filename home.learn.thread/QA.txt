@@ -20,3 +20,5 @@ Q3: how to make a method is thread-safe?
 3. use lock on a object to block other threads to enter the shared object
 4. use singal to control the code like mutex
 5. use ReadWriteLock. built-in function in .net.
+
+overview of thread safe:resource:https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives

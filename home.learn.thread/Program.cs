@@ -12,7 +12,7 @@ namespace home.learn.thread
         static void Main(string[] args)
         {
 #if DEBUG
-            args = new string[] { "-Example", "SimulateComplexTasks" };
+            args = new string[] { "-Example", "SimulateConcurrentDic" };
          
 #endif
             Thread.CurrentThread.Name = "MainThread";
@@ -76,6 +76,13 @@ namespace home.learn.thread
             AddAction(dic, TaskExamples.TaskCancel);
             AddAction(dic, TaskExamples.SimulateTaskWithException);
             AddAction(dic, TaskExamples.SimulateComplexTasks);
+
+            AddAction(dic, AwaitExamples.SimulateAsyncWithAwait);
+            AddAction(dic, AwaitExamples.SimulateAsyncLambda);
+            AddAction(dic, AwaitExamples.SimulateAsyncWithTwoAwait);
+
+            AddAction(dic, ConcurrentExamples.SimulateConcurrentDic);
+
             return dic;
         }
       
